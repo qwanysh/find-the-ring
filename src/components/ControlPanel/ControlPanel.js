@@ -2,10 +2,13 @@ import React from 'react';
 import './ControlPanel.css';
 
 const ControlPanel = props => {
+  const {openedChests, maxAttempts} = props;
+  const attemptsMade = maxAttempts - openedChests;
+
   return (
       <div className='ControlPanel'>
-        <p className='ControlPanel__text'>Chests opened: {props.openedChests}/{props.totalChests}</p>
-        <button className='ControlPanel__button' disabled={props.openedChests === 0}>Restart</button>
+        <p className='ControlPanel__text'>Attempts left: {attemptsMade}/{maxAttempts}</p>
+        <button className='ControlPanel__button' disabled={openedChests === 0}>Restart</button>
       </div>
   );
 };

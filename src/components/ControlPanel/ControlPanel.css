@@ -1,24 +1,23 @@
 .ControlPanel__text {
-    text-align: center;
-    margin: 0 0 20px;
-    font-size: 14px;
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 14px;
 }
 
 .ControlPanel__button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 50px;
-    display: block;
-    text-align: center;
-    border: 4px solid black;
-    cursor: pointer;
-    background: linear-gradient(to bottom, #F2EA11 49%, #F7B503 50%);
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
-    font-size: 12px;
-    transition: 0.3s;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  border: 4px solid black;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #F2EA11 49%, #F7B503 50%);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  transition: 0.3s;
 }
 
 .ControlPanel__button:disabled {
-    color: initial;
-    filter: grayscale(1);
+  color: initial;
+  filter: grayscale(1);
 }
