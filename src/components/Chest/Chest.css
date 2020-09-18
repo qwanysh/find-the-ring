@@ -1,0 +1,28 @@
+.Chest {
+    width: calc(290px / 6 - 10px);
+    height: calc(290px / 6 - 10px);
+    margin: 5px;
+    cursor: pointer;
+    background: url('chest.png') no-repeat -3px 50% / cover;
+}
+
+.Chest--open {
+    cursor: default;
+    background-position: -54px 50%;
+}
+
+.Chest--has-ring {
+    position: relative;
+    /*background-color: #F2EA11;*/
+}
+
+.Chest--has-ring::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translate(-50%);
+    background: url('ring.gif') no-repeat center / cover;
+}
