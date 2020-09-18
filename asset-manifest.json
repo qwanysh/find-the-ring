@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/find-the-ring/static/css/main.7f364bd2.chunk.css",
+    "main.js": "/find-the-ring/static/js/main.654ccbcb.chunk.js",
+    "main.js.map": "/find-the-ring/static/js/main.654ccbcb.chunk.js.map",
+    "runtime-main.js": "/find-the-ring/static/js/runtime-main.e5885e0b.js",
+    "runtime-main.js.map": "/find-the-ring/static/js/runtime-main.e5885e0b.js.map",
+    "static/js/2.52138beb.chunk.js": "/find-the-ring/static/js/2.52138beb.chunk.js",
+    "static/js/2.52138beb.chunk.js.map": "/find-the-ring/static/js/2.52138beb.chunk.js.map",
+    "index.html": "/find-the-ring/index.html",
+    "precache-manifest.f5b644ce6a1c1a88ddee8c1dcf69e664.js": "/find-the-ring/precache-manifest.f5b644ce6a1c1a88ddee8c1dcf69e664.js",
+    "service-worker.js": "/find-the-ring/service-worker.js",
+    "static/css/main.7f364bd2.chunk.css.map": "/find-the-ring/static/css/main.7f364bd2.chunk.css.map",
+    "static/js/2.52138beb.chunk.js.LICENSE.txt": "/find-the-ring/static/js/2.52138beb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5885e0b.js",
+    "static/js/2.52138beb.chunk.js",
+    "static/css/main.7f364bd2.chunk.css",
+    "static/js/main.654ccbcb.chunk.js"
+  ]
+}
