@@ -8,7 +8,11 @@ const ControlPanel = props => {
   return (
       <div className='ControlPanel'>
         <p className='ControlPanel__text'>Attempts left: {attemptsMade}/{maxAttempts}</p>
-        <button className='ControlPanel__button' disabled={openedChests === 0}>Restart</button>
+        <button
+            className='ControlPanel__button'
+            disabled={openedChests === 0}
+            onClick={props.restartGameHandler}
+        >Restart</button>
       </div>
   );
 };

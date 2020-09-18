@@ -25,6 +25,11 @@ const App = () => {
     }
   };
 
+  const restartGame = () => {
+    setGameStatus(GameStatus.IN_PROGRESS);
+    setChests(getChests(AMOUNT));
+  };
+
   return (
       <div className='App'>
         <div className='container'>
@@ -36,6 +41,7 @@ const App = () => {
           <ControlPanel
               openedChests={openedChests}
               maxAttempts={maxAttempts}
+              restartGameHandler={restartGame}
           />
         </div>
       </div>
