@@ -1,6 +1,6 @@
 .Chest {
-  width: calc(290px / 6 - 10px);
-  height: calc(290px / 6 - 10px);
+  width: calc(300px / 6 - 10px);
+  height: calc(300px / 6 - 10px);
   margin: 5px;
   cursor: pointer;
   background: url('chest.png') no-repeat -3px 50% / cover;
@@ -8,7 +8,7 @@
 
 .Chest--open {
   cursor: default;
-  background-position: -54px 50%;
+  background-position: -56px 50%;
 }
 
 .Chest--has-ring {

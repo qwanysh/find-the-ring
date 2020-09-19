@@ -1,9 +1,10 @@
 import React from 'react';
+import './GameStatusCaption.css';
 
 const GameStatusCaption = props => {
   return (
-      <div className='ChestContainer__caption'>
-        <p className='ChestContainer__text'>{props.children}</p>
+      <div className='GameStatusCaption'>
+        <p className='GameStatusCaption__text'>{props.children}</p>
       </div>
   );
 };

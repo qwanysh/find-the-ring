@@ -32,7 +32,8 @@ const App = () => {
 
   return (
       <div className='App'>
-        <div className='container'>
+        <div className='App__container'>
+          <h1 className='App__heading'>Find the ring</h1>
           <ChestContainer
               chests={chests}
               openChestHandler={openChest}

@@ -1,12 +1,9 @@
-@import-normalize;
-
 * {
   box-sizing: border-box;
   font-family: 'Press Start 2P', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  background: #82ccdd;
   margin: 0;
 }
