@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e3d33db5831de6b56de12f03bad5138",
+    "revision": "70168a8e3db7d640029f0c4346587ba9",
     "url": "/find-the-ring/index.html"
   },
   {
-    "revision": "f83f8952d2d9c1075fdf",
-    "url": "/find-the-ring/static/css/main.34c5deb6.chunk.css"
+    "revision": "ec3f2be9af26fc35aea7",
+    "url": "/find-the-ring/static/css/main.60ae0f6f.chunk.css"
   },
   {
     "revision": "320ec6d22dbe9a2e7002",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/find-the-ring/static/js/2.52138beb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f83f8952d2d9c1075fdf",
-    "url": "/find-the-ring/static/js/main.654ccbcb.chunk.js"
+    "revision": "ec3f2be9af26fc35aea7",
+    "url": "/find-the-ring/static/js/main.9b409b9d.chunk.js"
   },
   {
     "revision": "eb9ac6236d4745db2e90",
