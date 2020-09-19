@@ -1,29 +1,34 @@
 import React, {useState} from 'react';
 import './App.css';
-import {GameStatus, getChests, countOpenedChests} from '../../utils';
+import {countOpenedChests, GameStatus, getChests} from '../../utils';
 import ChestContainer from '../ChestContainer/ChestContainer';
 import ControlPanel from '../ControlPanel/ControlPanel';
 
 const App = () => {
   const AMOUNT = 36;
-  const maxAttempts = AMOUNT / 2;
+  const MAX_ATTEMPTS = AMOUNT / 2;
   const [gameStatus, setGameStatus] = useState(GameStatus.IN_PROGRESS);
   const [chests, setChests] = useState(getChests(AMOUNT));
   const openedChests = countOpenedChests(chests);
 
   const openChest = index => {
-    if (gameStatus !== GameStatus.IN_PROGRESS) return;
+    if (gameStatus !== GameStatus.IN_PROGRESS || chests[index].isOpen) return;
 
     const chestsCopy = [...chests];
-    chestsCopy[index].isOpen = true;
+    const targetChest = chestsCopy[index];
+    targetChest.isOpen = true;
     setChests(chestsCopy);
 
-    if (chestsCopy[index].hasRing) {
+    checkIsGameEnded(targetChest);
+  };
+
+  const checkIsGameEnded = chest => {
+    if (chest.hasRing && gameStatus !== GameStatus.DEFEAT) {
       setGameStatus(GameStatus.VICTORY);
-    } else if (openedChests + 1 === maxAttempts) {
+    } else if (openedChests + 1 === MAX_ATTEMPTS) {
       setGameStatus(GameStatus.DEFEAT);
     }
-  };
+  }
 
   const restartGame = () => {
     setGameStatus(GameStatus.IN_PROGRESS);
@@ -41,7 +46,7 @@ const App = () => {
           />
           <ControlPanel
               openedChests={openedChests}
-              maxAttempts={maxAttempts}
+              maxAttempts={MAX_ATTEMPTS}
               restartGameHandler={restartGame}
           />
         </div>
