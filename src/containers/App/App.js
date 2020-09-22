@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 import {countOpenedChests, GameStatus, getChests} from '../../utils';
-import ChestContainer from '../ChestContainer/ChestContainer';
-import ControlPanel from '../ControlPanel/ControlPanel';
+import ControlPanel from '../../components/ControlPanel/ControlPanel';
+import ChestContainer from '../../components/ChestContainer/ChestContainer';
+
 
 const App = () => {
   const AMOUNT = 36;
