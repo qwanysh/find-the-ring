@@ -18,7 +18,7 @@ export const createChests = amount => {
 };
 
 export const countOpenedChests = chests => {
-  return chests.filter(chest => chest.isOpen).length;
+  return chests.filter(chest => chest.isOpen && !chest.hasRing).length;
 };
 
 export const getChestWithRing = chests => {
