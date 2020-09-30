@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import {countOpenedChests, GameStatus, getChests, getChestWithRing} from '../../utils';
+import {countOpenedChests, GameStatus, createChests, getChestWithRing} from '../../utils';
 import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import ChestContainer from '../../components/ChestContainer/ChestContainer';
 
@@ -9,21 +9,20 @@ const App = () => {
   const AMOUNT = 36;
   const MAX_ATTEMPTS = AMOUNT / 2;
   const [gameStatus, setGameStatus] = useState(GameStatus.IN_PROGRESS);
-  const [chests, setChests] = useState(getChests(AMOUNT));
+  const [chests, setChests] = useState(createChests(AMOUNT));
   const openedChests = countOpenedChests(chests);
 
   const openChestHandler = index => {
     if (gameStatus !== GameStatus.IN_PROGRESS || chests[index].isOpen) return;
 
     const chestsCopy = [...chests];
-    const targetChest = chestsCopy[index];
-    targetChest.isOpen = true;
+    chestsCopy[index].open();
     setChests(chestsCopy);
   };
 
   const restartGameHandler = () => {
     setGameStatus(GameStatus.IN_PROGRESS);
-    setChests(getChests(AMOUNT));
+    setChests(createChests(AMOUNT));
   };
 
   useEffect(() => {

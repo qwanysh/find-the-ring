@@ -6,7 +6,7 @@ export class GameStatus {
   static VICTORY = 'victory';
 }
 
-export const getChests = amount => {
+export const createChests = amount => {
   const chests = [];
   const index = random(0, amount);
 
@@ -26,5 +26,11 @@ export const getChestWithRing = chests => {
 };
 
 const createChest = (hasRing = false) => {
-  return {hasRing, isOpen: false};
+  return {
+    hasRing,
+    isOpen: false,
+    open() {
+      this.isOpen = true;
+    },
+  };
 };
