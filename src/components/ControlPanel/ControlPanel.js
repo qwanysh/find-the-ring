@@ -3,8 +3,13 @@ import './ControlPanel.css';
 import {GameStatus} from '../../utils';
 
 const ControlPanel = props => {
+  const DANGER_ATTEMPTS = 5;
   const {openedChests, maxAttempts, gameStatus} = props;
-  const attemptsMade = maxAttempts - openedChests;
+  let attemptsMade = maxAttempts - openedChests;
+
+  if (attemptsMade <= DANGER_ATTEMPTS) {
+    attemptsMade = <span className='ControlPanel__text--danger'>{attemptsMade}</span>;
+  }
 
   return (
       <div className='ControlPanel'>

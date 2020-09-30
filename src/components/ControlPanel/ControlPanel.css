@@ -4,6 +4,10 @@
   font-size: 14px;
 }
 
+.ControlPanel__text--danger {
+  color: #EA2027;
+}
+
 .ControlPanel__button {
   width: 100%;
   padding: 10px;
