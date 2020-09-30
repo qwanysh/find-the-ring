@@ -11,7 +11,7 @@ export const getChests = amount => {
   const index = random(0, amount);
 
   for (let i = 0; i < amount; i++) {
-    chests.push(getChest(i === index));
+    chests.push(createChest(i === index));
   }
 
   return chests;
@@ -21,6 +21,10 @@ export const countOpenedChests = chests => {
   return chests.filter(chest => chest.isOpen).length;
 };
 
-const getChest = (hasRing = false) => {
+export const getChestWithRing = chests => {
+  return chests.find(chest => chest.hasRing);
+};
+
+const createChest = (hasRing = false) => {
   return {hasRing, isOpen: false};
 };
