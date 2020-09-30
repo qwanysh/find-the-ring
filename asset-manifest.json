@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/find-the-ring/static/css/main.4ef4953b.chunk.css",
-    "main.js": "/find-the-ring/static/js/main.d941219f.chunk.js",
-    "main.js.map": "/find-the-ring/static/js/main.d941219f.chunk.js.map",
+    "main.css": "/find-the-ring/static/css/main.1eb1416d.chunk.css",
+    "main.js": "/find-the-ring/static/js/main.0237cd93.chunk.js",
+    "main.js.map": "/find-the-ring/static/js/main.0237cd93.chunk.js.map",
     "runtime-main.js": "/find-the-ring/static/js/runtime-main.e5885e0b.js",
     "runtime-main.js.map": "/find-the-ring/static/js/runtime-main.e5885e0b.js.map",
-    "static/js/2.52138beb.chunk.js": "/find-the-ring/static/js/2.52138beb.chunk.js",
-    "static/js/2.52138beb.chunk.js.map": "/find-the-ring/static/js/2.52138beb.chunk.js.map",
+    "static/js/2.56d68fdb.chunk.js": "/find-the-ring/static/js/2.56d68fdb.chunk.js",
+    "static/js/2.56d68fdb.chunk.js.map": "/find-the-ring/static/js/2.56d68fdb.chunk.js.map",
     "index.html": "/find-the-ring/index.html",
-    "precache-manifest.5b1dc3e295c25835af733c20e1ca723b.js": "/find-the-ring/precache-manifest.5b1dc3e295c25835af733c20e1ca723b.js",
+    "precache-manifest.35076f97ef6f3688b8753b552f3e4ef2.js": "/find-the-ring/precache-manifest.35076f97ef6f3688b8753b552f3e4ef2.js",
     "service-worker.js": "/find-the-ring/service-worker.js",
-    "static/css/main.4ef4953b.chunk.css.map": "/find-the-ring/static/css/main.4ef4953b.chunk.css.map",
-    "static/js/2.52138beb.chunk.js.LICENSE.txt": "/find-the-ring/static/js/2.52138beb.chunk.js.LICENSE.txt"
+    "static/css/main.1eb1416d.chunk.css.map": "/find-the-ring/static/css/main.1eb1416d.chunk.css.map",
+    "static/js/2.56d68fdb.chunk.js.LICENSE.txt": "/find-the-ring/static/js/2.56d68fdb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e5885e0b.js",
-    "static/js/2.52138beb.chunk.js",
-    "static/css/main.4ef4953b.chunk.css",
-    "static/js/main.d941219f.chunk.js"
+    "static/js/2.56d68fdb.chunk.js",
+    "static/css/main.1eb1416d.chunk.css",
+    "static/js/main.0237cd93.chunk.js"
   ]
 }
