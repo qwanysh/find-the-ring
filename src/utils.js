@@ -8,7 +8,7 @@ export class GameStatus {
 
 export const createChests = amount => {
   const chests = [];
-  const index = random(0, amount);
+  const index = random(0, amount - 1);
 
   for (let i = 0; i < amount; i++) {
     chests.push(createChest(i === index));
