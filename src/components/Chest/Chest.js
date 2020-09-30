@@ -10,7 +10,7 @@ const Chest = props => {
   if (isOpen && hasRing) {
     classes.push('Chest--has-ring');
   }
-  return <div className={classes.join(' ')} onClick={() => props.openChestHandler(props.index)}/>
+  return <div className={classes.join(' ')} onClick={() => props.openChest(props.index)}/>
 };
 
 

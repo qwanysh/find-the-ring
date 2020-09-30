@@ -11,7 +11,7 @@ const ControlPanel = props => {
         <button
             className='ControlPanel__button'
             disabled={openedChests === 0}
-            onClick={props.restartGameHandler}
+            onClick={props.restartGame}
         >Restart</button>
       </div>
   );
