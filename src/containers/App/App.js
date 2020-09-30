@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
-import {countOpenedChests, GameStatus, getChests} from '../../utils';
+import {countOpenedChests, GameStatus, getChests, getChestWithRing} from '../../utils';
 import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import ChestContainer from '../../components/ChestContainer/ChestContainer';
 
@@ -12,29 +12,28 @@ const App = () => {
   const [chests, setChests] = useState(getChests(AMOUNT));
   const openedChests = countOpenedChests(chests);
 
-  const openChest = index => {
+  const openChestHandler = index => {
     if (gameStatus !== GameStatus.IN_PROGRESS || chests[index].isOpen) return;
 
     const chestsCopy = [...chests];
     const targetChest = chestsCopy[index];
     targetChest.isOpen = true;
     setChests(chestsCopy);
-
-    checkIsGameEnded(targetChest);
   };
 
-  const checkIsGameEnded = chest => {
-    if (chest.hasRing && gameStatus !== GameStatus.DEFEAT) {
-      setGameStatus(GameStatus.VICTORY);
-    } else if (openedChests + 1 === MAX_ATTEMPTS) {
-      setGameStatus(GameStatus.DEFEAT);
-    }
-  }
-
-  const restartGame = () => {
+  const restartGameHandler = () => {
     setGameStatus(GameStatus.IN_PROGRESS);
     setChests(getChests(AMOUNT));
   };
+
+  useEffect(() => {
+    const chestWithRing = getChestWithRing(chests);
+    if (chestWithRing.isOpen) {
+      setGameStatus(GameStatus.VICTORY);
+    } else if (openedChests === MAX_ATTEMPTS) {
+      setGameStatus(GameStatus.DEFEAT);
+    }
+  }, [chests, openedChests, MAX_ATTEMPTS]);
 
   return (
       <div className='App'>
@@ -42,13 +41,13 @@ const App = () => {
           <h1 className='App__heading'>Find the ring</h1>
           <ChestContainer
               chests={chests}
-              openChestHandler={openChest}
+              openChest={openChestHandler}
               gameStatus={gameStatus}
           />
           <ControlPanel
               openedChests={openedChests}
               maxAttempts={MAX_ATTEMPTS}
-              restartGameHandler={restartGame}
+              restartGame={restartGameHandler}
           />
         </div>
       </div>
