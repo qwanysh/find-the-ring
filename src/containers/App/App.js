@@ -25,14 +25,24 @@ const App = () => {
     setChests(createChests(AMOUNT));
   };
 
-  useEffect(() => {
-    const chestWithRing = getChestWithRing(chests);
-    if (chestWithRing.isOpen) {
+  const checkIsGameEnded = () => {
+    if (getChestWithRing(chests).isOpen && gameStatus !== GameStatus.DEFEAT) {
       setGameStatus(GameStatus.VICTORY);
     } else if (openedChests === MAX_ATTEMPTS) {
       setGameStatus(GameStatus.DEFEAT);
     }
-  }, [chests, openedChests, MAX_ATTEMPTS]);
+  };
+
+  const showChestWithRing = () => {
+    if (!getChestWithRing(chests).isOpen && gameStatus === GameStatus.DEFEAT) {
+      const chestsCopy = [...chests];
+      getChestWithRing(chestsCopy).open();
+      setChests(chestsCopy);
+    }
+  };
+
+  useEffect(checkIsGameEnded);
+  useEffect(showChestWithRing, [gameStatus]);
 
   return (
       <div className='App'>
@@ -40,11 +50,12 @@ const App = () => {
           <h1 className='App__heading'>Find the ring</h1>
           <ChestContainer
               chests={chests}
-              openChest={openChestHandler}
               gameStatus={gameStatus}
+              openChest={openChestHandler}
           />
           <ControlPanel
               openedChests={openedChests}
+              gameStatus={gameStatus}
               maxAttempts={MAX_ATTEMPTS}
               restartGame={restartGameHandler}
           />

@@ -1,8 +1,9 @@
 import React from 'react';
 import './ControlPanel.css';
+import {GameStatus} from '../../utils';
 
 const ControlPanel = props => {
-  const {openedChests, maxAttempts} = props;
+  const {openedChests, maxAttempts, gameStatus} = props;
   const attemptsMade = maxAttempts - openedChests;
 
   return (
@@ -10,7 +11,7 @@ const ControlPanel = props => {
         <p className='ControlPanel__text'>Attempts left: {attemptsMade}/{maxAttempts}</p>
         <button
             className='ControlPanel__button'
-            disabled={openedChests === 0}
+            disabled={openedChests === 0 && gameStatus === GameStatus.IN_PROGRESS}
             onClick={props.restartGame}
         >Restart</button>
       </div>

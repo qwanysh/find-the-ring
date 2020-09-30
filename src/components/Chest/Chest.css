@@ -9,11 +9,13 @@
 .Chest--open {
   cursor: default;
   background-position: -56px 50%;
+  filter: grayscale(1);
 }
 
 .Chest--has-ring {
   position: relative;
   background-color: #F2EA11;
+  filter: grayscale(0);
 }
 
 .Chest--has-ring::after {
