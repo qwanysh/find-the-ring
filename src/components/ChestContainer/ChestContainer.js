@@ -5,9 +5,14 @@ import {GameStatus} from '../../utils';
 import GameStatusCaption from '../GameStatusCaption/GameStatusCaption';
 
 const ChestContainer = props => {
-  const chestElements = props.chests.map((chest, index) => {
-    return <Chest key={index} chest={chest} index={index} openChest={props.openChest}/>;
-  });
+  const chestElements = props.chests.map((chest, index) => (
+      <Chest
+          key={index}
+          chest={chest}
+          index={index}
+          openChest={props.openChest}
+      />
+  ));
 
   let gameEndText = null;
 
