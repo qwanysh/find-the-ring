@@ -19,6 +19,12 @@ export const getChestWithRing = chests => {
   return chests.find(chest => chest.hasRing);
 };
 
+export const openChest = (chests, index) => {
+  const chestsCopy = [...chests];
+  chestsCopy[index] = chestsCopy[index].open();
+  return chestsCopy;
+};
+
 const createChest = (hasRing = false) => {
   return {
     hasRing,
