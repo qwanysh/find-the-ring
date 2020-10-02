@@ -24,7 +24,7 @@ const createChest = (hasRing = false) => {
     hasRing,
     isOpen: false,
     open() {
-      this.isOpen = true;
+      return {...this, isOpen: true};
     },
   };
 };
