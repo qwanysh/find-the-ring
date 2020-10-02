@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import {countOpenedChests, GameStatus, createChests, getChestWithRing} from '../../utils';
+import {countOpenedChests, GameStatus, createChests, getChestWithRing, openChest} from '../../utils';
 import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import ChestContainer from '../../components/ChestContainer/ChestContainer';
 
@@ -13,11 +13,9 @@ const App = () => {
   const openedChests = countOpenedChests(chests);
 
   const openChestHandler = index => {
-    if (gameStatus !== GameStatus.IN_PROGRESS || chests[index].isOpen) return;
-
-    const chestsCopy = [...chests];
-    chestsCopy[index] = chestsCopy[index].open();
-    setChests(chestsCopy);
+    if (gameStatus === GameStatus.IN_PROGRESS && !chests[index].isOpen) {
+      setChests(openChest(chests, index));
+    }
   };
 
   const restartGameHandler = () => {
@@ -34,11 +32,9 @@ const App = () => {
   };
 
   const showChestWithRing = () => {
-    if (!getChestWithRing(chests).isOpen && gameStatus === GameStatus.DEFEAT) {
-      const chestsCopy = [...chests];
-      const chest = getChestWithRing(chestsCopy);
-      chestsCopy[chestsCopy.indexOf(chest)] = chest.open();
-      setChests(chestsCopy);
+    if (gameStatus === GameStatus.DEFEAT && !getChestWithRing(chests).isOpen) {
+      const index = chests.indexOf(getChestWithRing(chests));
+      setChests(openChest(chests, index));
     }
   };
 
