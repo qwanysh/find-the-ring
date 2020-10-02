@@ -36,7 +36,8 @@ const App = () => {
   const showChestWithRing = () => {
     if (!getChestWithRing(chests).isOpen && gameStatus === GameStatus.DEFEAT) {
       const chestsCopy = [...chests];
-      getChestWithRing(chestsCopy).open();
+      const chest = getChestWithRing(chestsCopy);
+      chestsCopy[chestsCopy.indexOf(chest)] = chest.open();
       setChests(chestsCopy);
     }
   };
