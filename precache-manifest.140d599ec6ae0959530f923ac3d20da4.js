@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c87259646c770562be222289a00a6f4",
+    "revision": "98f3bcb8cdcabedae83eb999d3a3b315",
     "url": "/find-the-ring/index.html"
   },
   {
-    "revision": "3e11a310a29637ffc68c",
+    "revision": "ea54dd6b7e62864d60a6",
     "url": "/find-the-ring/static/css/main.623bf530.chunk.css"
   },
   {
-    "revision": "13431dd75b76f321648f",
-    "url": "/find-the-ring/static/js/2.56d68fdb.chunk.js"
+    "revision": "7d61cf4e8570894828cc",
+    "url": "/find-the-ring/static/js/2.c0102f00.chunk.js"
   },
   {
     "revision": "90565ba0b43e1b95d2876295dfd7014d",
-    "url": "/find-the-ring/static/js/2.56d68fdb.chunk.js.LICENSE.txt"
+    "url": "/find-the-ring/static/js/2.c0102f00.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3e11a310a29637ffc68c",
-    "url": "/find-the-ring/static/js/main.39d9996a.chunk.js"
+    "revision": "ea54dd6b7e62864d60a6",
+    "url": "/find-the-ring/static/js/main.414f4e6d.chunk.js"
   },
   {
     "revision": "eb9ac6236d4745db2e90",

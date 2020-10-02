@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/find-the-ring/precache-manifest.1fd7083681fe32425485999e6e538b38.js"
+  "/find-the-ring/precache-manifest.140d599ec6ae0959530f923ac3d20da4.js"
 );
 
 self.addEventListener('message', (event) => {
