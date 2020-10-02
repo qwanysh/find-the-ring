@@ -16,7 +16,7 @@ const App = () => {
     if (gameStatus !== GameStatus.IN_PROGRESS || chests[index].isOpen) return;
 
     const chestsCopy = [...chests];
-    chestsCopy[index].open();
+    chestsCopy[index] = chestsCopy[index].open();
     setChests(chestsCopy);
   };
 
