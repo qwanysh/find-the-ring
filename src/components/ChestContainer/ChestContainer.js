@@ -1,6 +1,6 @@
 import React from 'react';
 import './ChestContainer.css';
-import Chest from '../Chest/Chest';
+import Chest from './Chest/Chest';
 import {GameStatus} from '../../utils';
 import GameStatusCaption from '../GameStatusCaption/GameStatusCaption';
 
