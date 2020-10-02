@@ -14,7 +14,7 @@ const ChestContainer = props => {
       />
   ));
 
-  let gameEndText = null;
+  let gameEndText;
 
   if (props.gameStatus === GameStatus.DEFEAT) {
     gameEndText = 'You lose!';
