@@ -1,4 +1,4 @@
-import {random} from 'lodash';
+import {random, range} from 'lodash';
 
 export class GameStatus {
   static IN_PROGRESS = 'in progress';
@@ -7,14 +7,8 @@ export class GameStatus {
 }
 
 export const createChests = amount => {
-  const chests = [];
   const index = random(0, amount - 1);
-
-  for (let i = 0; i < amount; i++) {
-    chests.push(createChest(i === index));
-  }
-
-  return chests;
+  return range(amount).map(i => createChest(i === index));
 };
 
 export const countOpenedChests = chests => {
