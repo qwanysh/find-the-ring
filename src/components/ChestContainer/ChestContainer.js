@@ -2,7 +2,7 @@ import React from 'react';
 import './ChestContainer.css';
 import Chest from './Chest/Chest';
 import {GameStatus} from '../../utils';
-import GameStatusCaption from '../GameStatusCaption/GameStatusCaption';
+import GameStatusCaption from './GameStatusCaption/GameStatusCaption';
 
 const ChestContainer = props => {
   const chestElements = props.chests.map((chest, index) => (
