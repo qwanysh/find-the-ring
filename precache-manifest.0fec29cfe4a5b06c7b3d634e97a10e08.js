@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8fd12e5903675f28fd268ac965be8fa6",
+    "revision": "7d3ab81c355835f51c8efe3c1006c537",
     "url": "/find-the-ring/index.html"
   },
   {
