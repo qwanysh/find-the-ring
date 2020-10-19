@@ -10,7 +10,7 @@ const App = () => {
       <div className='App'>
         <div className='App__container'>
           <h1 className='App__heading'>Find the ring</h1>
-          <BrowserRouter>
+          <BrowserRouter basename='/find-the-ring/'>
             <Switch>
               <Route path='/game' component={Game}/>
               <Route path='/' exact component={Menu}/>
