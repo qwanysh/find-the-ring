@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
+import './Game.css';
 import {countOpenedChests, GameStatus, createChests, getChestWithRing, openChest} from '../../utils';
 import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import ChestContainer from '../../components/ChestContainer/ChestContainer';
 
 
-const App = () => {
+const Game = () => {
   const AMOUNT = 36;
   const MAX_ATTEMPTS = AMOUNT / 2;
   const [gameStatus, setGameStatus] = useState(GameStatus.IN_PROGRESS);
@@ -42,9 +42,9 @@ const App = () => {
   useEffect(showChestWithRing, [gameStatus]);
 
   return (
-      <div className='App'>
-        <div className='App__container'>
-          <h1 className='App__heading'>Find the ring</h1>
+      <div className='Game'>
+        <div className='Game__container'>
+          <h1 className='Game__heading'>Find the ring</h1>
           <ChestContainer
               chests={chests}
               gameStatus={gameStatus}
@@ -61,4 +61,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Game;
