@@ -1,16 +1,16 @@
-.Game {
+.App {
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.Game__container {
+.App__container {
   max-width: 320px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.Game__heading {
+.App__heading {
   text-align: center;
   font-size: 18px;
   margin: 0 0 20px;

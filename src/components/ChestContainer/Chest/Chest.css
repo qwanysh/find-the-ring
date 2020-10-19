@@ -3,7 +3,7 @@
   height: calc(300px / 6 - 10px);
   margin: 5px;
   cursor: pointer;
-  background: url('chest.png') no-repeat -3px 50% / cover;
+  background: url('../../../assets/chest.png') no-repeat -3px 50% / cover;
 }
 
 .Chest--open {
@@ -26,5 +26,5 @@
   top: 4px;
   left: 50%;
   transform: translate(-50%);
-  background: url('ring.gif') no-repeat center / cover;
+  background: url('../../../assets/ring.gif') no-repeat center / cover;
 }

@@ -1,0 +1,23 @@
+.Button {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  border: 4px solid black;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, #F2EA11 49%, #F7B503 50%);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+.Button:disabled {
+  color: initial;
+  filter: grayscale(1);
+}

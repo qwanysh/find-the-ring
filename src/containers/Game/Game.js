@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './Game.css';
-import {countOpenedChests, GameStatus, createChests, getChestWithRing, openChest} from '../../utils';
+import {countOpenedChests, createChests, GameStatus, getChestWithRing, openChest} from '../../utils';
 import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import ChestContainer from '../../components/ChestContainer/ChestContainer';
 
@@ -42,22 +41,19 @@ const Game = () => {
   useEffect(showChestWithRing, [gameStatus]);
 
   return (
-      <div className='Game'>
-        <div className='Game__container'>
-          <h1 className='Game__heading'>Find the ring</h1>
-          <ChestContainer
-              chests={chests}
-              gameStatus={gameStatus}
-              openChest={openChestHandler}
-          />
-          <ControlPanel
-              openedChests={openedChests}
-              gameStatus={gameStatus}
-              maxAttempts={MAX_ATTEMPTS}
-              restartGame={restartGameHandler}
-          />
-        </div>
-      </div>
+      <>
+        <ChestContainer
+            chests={chests}
+            gameStatus={gameStatus}
+            openChest={openChestHandler}
+        />
+        <ControlPanel
+            openedChests={openedChests}
+            gameStatus={gameStatus}
+            maxAttempts={MAX_ATTEMPTS}
+            restartGame={restartGameHandler}
+        />
+      </>
   );
 }
 
