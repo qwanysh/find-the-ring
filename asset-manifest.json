@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/find-the-ring/static/css/main.01c761a5.chunk.css",
-    "main.js": "/find-the-ring/static/js/main.5e3e3d5f.chunk.js",
-    "main.js.map": "/find-the-ring/static/js/main.5e3e3d5f.chunk.js.map",
+    "main.js": "/find-the-ring/static/js/main.f55c70e0.chunk.js",
+    "main.js.map": "/find-the-ring/static/js/main.f55c70e0.chunk.js.map",
     "runtime-main.js": "/find-the-ring/static/js/runtime-main.e5885e0b.js",
     "runtime-main.js.map": "/find-the-ring/static/js/runtime-main.e5885e0b.js.map",
     "static/js/2.d0254326.chunk.js": "/find-the-ring/static/js/2.d0254326.chunk.js",
     "static/js/2.d0254326.chunk.js.map": "/find-the-ring/static/js/2.d0254326.chunk.js.map",
     "index.html": "/find-the-ring/index.html",
-    "precache-manifest.e8a6feec58bf20108352a7c4b6986665.js": "/find-the-ring/precache-manifest.e8a6feec58bf20108352a7c4b6986665.js",
+    "precache-manifest.4b5ca0e202c1aa357758365b4b7f84ae.js": "/find-the-ring/precache-manifest.4b5ca0e202c1aa357758365b4b7f84ae.js",
     "service-worker.js": "/find-the-ring/service-worker.js",
     "static/css/main.01c761a5.chunk.css.map": "/find-the-ring/static/css/main.01c761a5.chunk.css.map",
     "static/js/2.d0254326.chunk.js.LICENSE.txt": "/find-the-ring/static/js/2.d0254326.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e5885e0b.js",
     "static/js/2.d0254326.chunk.js",
     "static/css/main.01c761a5.chunk.css",
-    "static/js/main.5e3e3d5f.chunk.js"
+    "static/js/main.f55c70e0.chunk.js"
   ]
 }
