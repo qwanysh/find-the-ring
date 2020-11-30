@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { openChest } from '../../../store/actions';
+import { Context } from '../../../store/contextProvider';
 import './Chest.css';
 
-const Chest = ({ chest, openChest, index }) => {
-  const classes = ['Chest'];
+const Chest = ({ chest, index }) => {
+  const [, dispatch] = useContext(Context);
 
+  const classes = ['Chest'];
   if (chest.isOpen) {
     classes.push('Chest--open');
     if (chest.hasRing) {
@@ -11,7 +14,12 @@ const Chest = ({ chest, openChest, index }) => {
     }
   }
 
-  return <div className={classes.join(' ')} onClick={() => openChest(index)} />;
+  return (
+    <div
+      className={classes.join(' ')}
+      onClick={() => dispatch(openChest(index))}
+    />
+  );
 };
 
 export default Chest;

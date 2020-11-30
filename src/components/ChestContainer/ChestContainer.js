@@ -1,28 +1,22 @@
-import React from 'react';
-import './ChestContainer.css';
+import React, { useContext } from 'react';
+import { GameStatus } from '../../consts';
+import { Context } from '../../store/contextProvider';
 import Chest from './Chest/Chest';
-import { GameStatus } from '../../utils';
 import GameStatusCaption from './GameStatusCaption/GameStatusCaption';
+import './ChestContainer.css';
 
-const ChestContainer = ({ chests, gameStatus, openChest }) => {
+const ChestContainer = () => {
+  const [state] = useContext(Context);
+  const { gameStatus, chests } = state;
+
   const chestElements = chests.map((chest, index) => (
-    <Chest key={index} chest={chest} index={index} openChest={openChest} />
+    <Chest key={index} chest={chest} index={index} />
   ));
-
-  let gameEndText;
-
-  if (gameStatus === GameStatus.DEFEAT) {
-    gameEndText = 'You lose!';
-  } else if (gameStatus === GameStatus.VICTORY) {
-    gameEndText = 'You found it!';
-  }
 
   return (
     <div className="ChestContainer">
       {chestElements}
-      {gameEndText ? (
-        <GameStatusCaption>{gameEndText}</GameStatusCaption>
-      ) : null}
+      {gameStatus !== GameStatus.IN_PROGRESS && <GameStatusCaption />}
     </div>
   );
 };

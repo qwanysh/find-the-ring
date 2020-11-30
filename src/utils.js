@@ -1,11 +1,5 @@
 import { random, range } from 'lodash';
 
-export class GameStatus {
-  static IN_PROGRESS = 'in progress';
-  static DEFEAT = 'defeat';
-  static VICTORY = 'victory';
-}
-
 export const createChests = (amount) => {
   const index = random(0, amount - 1);
   return range(amount).map((i) => createChest(i === index));
