@@ -1,4 +1,4 @@
-import {random, range} from 'lodash';
+import { random, range } from 'lodash';
 
 export class GameStatus {
   static IN_PROGRESS = 'in progress';
@@ -6,17 +6,17 @@ export class GameStatus {
   static VICTORY = 'victory';
 }
 
-export const createChests = amount => {
+export const createChests = (amount) => {
   const index = random(0, amount - 1);
-  return range(amount).map(i => createChest(i === index));
+  return range(amount).map((i) => createChest(i === index));
 };
 
-export const countOpenedChests = chests => {
-  return chests.filter(chest => chest.isOpen && !chest.hasRing).length;
+export const countOpenedChests = (chests) => {
+  return chests.filter((chest) => chest.isOpen && !chest.hasRing).length;
 };
 
-export const getChestWithRing = chests => {
-  return chests.find(chest => chest.hasRing);
+export const getChestWithRing = (chests) => {
+  return chests.find((chest) => chest.hasRing);
 };
 
 export const openChest = (chests, index) => {
@@ -30,7 +30,7 @@ const createChest = (hasRing = false) => {
     hasRing,
     isOpen: false,
     open() {
-      return {...this, isOpen: true};
+      return { ...this, isOpen: true };
     },
   };
 };

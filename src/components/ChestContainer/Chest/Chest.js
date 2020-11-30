@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Chest.css';
-
 
 class Chest extends Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -8,7 +7,7 @@ class Chest extends Component {
   }
 
   render() {
-    const {isOpen, hasRing} = this.props.chest;
+    const { isOpen, hasRing } = this.props.chest;
     const classes = ['Chest'];
 
     if (isOpen) {
@@ -18,10 +17,12 @@ class Chest extends Component {
       classes.push('Chest--has-ring');
     }
 
-    return <div
+    return (
+      <div
         className={classes.join(' ')}
         onClick={() => this.props.openChest(this.props.index)}
-    />;
+      />
+    );
   }
 }
 

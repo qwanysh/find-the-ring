@@ -1,11 +1,11 @@
 import React from 'react';
 import './GameStatusCaption.css';
 
-const GameStatusCaption = props => {
+const GameStatusCaption = ({ children }) => {
   return (
-      <div className='GameStatusCaption'>
-        <p className='GameStatusCaption__text'>{props.children}</p>
-      </div>
+    <div className="GameStatusCaption">
+      <p className="GameStatusCaption__text">{children}</p>
+    </div>
   );
 };
 
