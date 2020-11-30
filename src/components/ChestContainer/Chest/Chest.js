@@ -1,29 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Chest.css';
 
-class Chest extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.chest.isOpen !== nextProps.chest.isOpen;
-  }
+const Chest = ({ chest, openChest, index }) => {
+  const classes = ['Chest'];
 
-  render() {
-    const { isOpen, hasRing } = this.props.chest;
-    const classes = ['Chest'];
-
-    if (isOpen) {
-      classes.push('Chest--open');
-    }
-    if (isOpen && hasRing) {
+  if (chest.isOpen) {
+    classes.push('Chest--open');
+    if (chest.hasRing) {
       classes.push('Chest--has-ring');
     }
-
-    return (
-      <div
-        className={classes.join(' ')}
-        onClick={() => this.props.openChest(this.props.index)}
-      />
-    );
   }
-}
+
+  return <div className={classes.join(' ')} onClick={() => openChest(index)} />;
+};
 
 export default Chest;
