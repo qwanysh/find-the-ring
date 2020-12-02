@@ -13,9 +13,4 @@ export const getChestWithRing = (chests) => {
   return chests.find((chest) => chest.hasRing);
 };
 
-const createChest = (hasRing = false) => {
-  return {
-    hasRing,
-    isOpen: false,
-  };
-};
+const createChest = (hasRing = false) => ({ hasRing, isOpen: false });
