@@ -7,3 +7,8 @@ export const GameStatus = {
   DEFEAT: 'DEFEAT',
   VICTORY: 'VICTORY',
 };
+
+export const GameEndPhrases = {
+  [GameStatus.DEFEAT]: 'You lose!',
+  [GameStatus.VICTORY]: 'You found it!',
+};

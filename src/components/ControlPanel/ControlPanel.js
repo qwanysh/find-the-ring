@@ -3,12 +3,14 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../store/contextProvider';
 import { restartGame } from '../../store/actions';
+import { countOpenedChests } from '../../utils';
 import Button from '../UI/Button/Button';
 import './ControlPanel.css';
 
-const ControlPanel = ({ openedChests }) => {
+const ControlPanel = () => {
   const [state, dispatch] = useContext(Context);
-  const { gameStatus } = state;
+  const { gameStatus, chests } = state;
+  const openedChests = countOpenedChests(chests);
   let attemptsMade = MAX_ATTEMPTS - openedChests;
 
   if (attemptsMade <= DANGER_ATTEMPTS) {

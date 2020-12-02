@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { GameStatus } from '../../consts';
 import { Context } from '../../store/contextProvider';
 import Chest from './Chest/Chest';
-import GameStatusCaption from './GameStatusCaption/GameStatusCaption';
+import GameStatusCaption from '../GameStatusCaption/GameStatusCaption';
 import './ChestContainer.css';
 
 const ChestContainer = () => {

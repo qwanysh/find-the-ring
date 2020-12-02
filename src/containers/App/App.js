@@ -5,7 +5,7 @@ import ContextProvider from '../../store/contextProvider';
 import { createChests } from '../../utils';
 import { CHEST_COUNT, GameStatus } from '../../consts';
 import reducer from '../../store/reducer';
-import Game from '../Game/Game';
+import Game from '../../components/Game/Game';
 import Menu from '../../components/Menu/Menu';
 import './App.css';
 
