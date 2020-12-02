@@ -4,7 +4,7 @@ import {
   OPEN_CHEST,
   RESTART_GAME,
 } from './actionTypes';
-import { AMOUNT, GameStatus } from '../consts';
+import { CHEST_COUNT, GameStatus } from '../consts';
 import { createChests, openChest } from '../utils';
 
 const reducer = (state, { type, payload }) => {
@@ -27,7 +27,7 @@ const reducer = (state, { type, payload }) => {
     case RESTART_GAME:
       return {
         ...state,
-        chests: createChests(AMOUNT),
+        chests: createChests(CHEST_COUNT),
         gameStatus: GameStatus.IN_PROGRESS,
       };
 

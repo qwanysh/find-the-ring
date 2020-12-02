@@ -15,6 +15,6 @@ export const setChests = (chests) => ({
   payload: chests,
 });
 
-export const openChest = (index) => ({ type: OPEN_CHEST, payload: index });
+export const openChest = (chestIndex) => ({ type: OPEN_CHEST, payload: chestIndex });
 
 export const restartGame = () => ({ type: RESTART_GAME });
