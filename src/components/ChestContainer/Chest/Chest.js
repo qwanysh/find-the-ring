@@ -1,11 +1,7 @@
-import React, { useContext } from 'react';
-import { openChest } from '../../../store/actions';
-import { Context } from '../../../store/contextProvider';
+import React from 'react';
 import './Chest.css';
 
-const Chest = ({ chest, index }) => {
-  const [, dispatch] = useContext(Context);
-
+const Chest = ({ chest, openChest }) => {
   const classes = ['Chest'];
   if (chest.isOpen) {
     classes.push('Chest--open');
@@ -14,12 +10,7 @@ const Chest = ({ chest, index }) => {
     }
   }
 
-  return (
-    <div
-      className={classes.join(' ')}
-      onClick={() => dispatch(openChest(index))}
-    />
-  );
+  return <div className={classes.join(' ')} onClick={openChest} />;
 };
 
 export default Chest;
